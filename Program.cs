@@ -23,7 +23,7 @@ while(!indirizzi.EndOfStream)
         int zip = int.Parse(zipString);
 
         
-        Indirizzo indirizzo = new Indirizzo(name,surname,street,city,province,zip);
+        Indirizzo indirizzo =  new Indirizzo(name,surname,street,city,province,zip);
         indirizziConvertiti.Add(indirizzo);
     }
     catch(Exception e)
