@@ -11,6 +11,7 @@ while(!indirizzi.EndOfStream)
     string linea = indirizzi.ReadLine();
     Console.WriteLine(linea);
     string[] data = linea.Split(",");
+  
     try
     {
         string name= data[0];
@@ -21,12 +22,13 @@ while(!indirizzi.EndOfStream)
         string zipString=data[5];
         int zip = int.Parse(zipString);
 
-        name = name.Replace("- ", "");
+        
         Indirizzo indirizzo = new Indirizzo(name,surname,street,city,province,zip);
         indirizziConvertiti.Add(indirizzo);
     }
     catch(Exception e)
     {
+        
         indirizziCorrotti.Add(linea);
     }
 }
